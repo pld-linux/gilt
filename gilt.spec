@@ -10,7 +10,7 @@ Patch0:		%{name}-configure.in.patch
 URL:		http://sol.spaceports.com/~engels/programming/unix/gilt/
 BuildRequires:	autoconf
 BuildRequires:	automake
-#Requires:	
+#Requires:
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
