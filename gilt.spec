@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications/Graphics
 Source0:	http://sol.spaceports.com/~engels/programming/unix/gilt/file/Gilt.java.final.tgz
+# Source0-md5:	1a4c8400b2e90ed81381e0e5726a61d6
 Patch0:		%{name}-configure.in.patch
 URL:		http://sol.spaceports.com/~engels/programming/unix/gilt/
 BuildRequires:	autoconf
