@@ -5,14 +5,15 @@ Version:	0.0.2
 Release:	1
 License:	GPL
 Group:		X11/Applications/Graphics
-Group(pl):	grafika
+Group(de):	X11/Applikationen/Grafik
+Group(pl):	X11/Aplikacje/Grafika
 Source0:	%{name}.tgz
-Patch0:		gilt-configure.in.patch
+Patch0:		%{name}-configure.in.patch
 #BuildRequires:	
 #Requires:	
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define	_prefix	/usr/X11R6
+%define		_prefix		/usr/X11R6
 
 %description
 
@@ -20,19 +21,18 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %prep
 %setup -q -n %{name}
-
 %patch -p0
 
 %build
 rm -rf config.*
 aclocal
 autoconf
-#CPPFLAGS="$RPM_OPT_FLAGS -Wall -Iusr/X11R6 -I%{_includedir}" \
-#CPP="gcc $RPM_OPT_FLAGS -Wall -Iusr/X11R6 -I%{_includedir}" \
+#CPPFLAGS="%{rpmcflags} -Wall -Iusr/X11R6 -I%{_includedir}" \
+#CPP="%{__cc} %{rpmcflags} -Wall -Iusr/X11R6 -I%{_includedir}" \
 #INCLUDEDIR="-I%{_includedir}" \
 CFLAGS="-I%{_includedir} "	\
 ./configure --prefix=%{_prefix}
-%{__make} RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
+%{__make} RPM_OPT_FLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
