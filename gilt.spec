@@ -10,7 +10,7 @@ Source:		%{name}.tgz
 Patch:		gilt-configure.in.patch
 #BuildRequires:	
 #Requires:	
-Buildroot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define	_prefix	/usr/X11R6
 
