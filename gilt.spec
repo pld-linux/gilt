@@ -5,8 +5,6 @@ Version:	0.0.2
 Release:	1
 License:	GPL
 Group:		X11/Applications/Graphics
-Group(de):	X11/Applikationen/Grafik
-Group(pl):	X11/Aplikacje/Grafika
 Source0:	http://sol.spaceports.com/~engels/programming/unix/gilt/file/Gilt.java.final.tgz
 Patch0:		%{name}-configure.in.patch
 URL:		http://sol.spaceports.com/~engels/programming/unix/gilt/
