@@ -1,5 +1,5 @@
-Summary:	gilt
-Summary(pl):	gilt
+Summary:	gilt - text oriented pictures editor
+Summary(pl):	gilt - tekstowo zorientowany edytor obrazków
 Name:		gilt
 Version:	0.0.2
 Release:	1
@@ -7,17 +7,21 @@ License:	GPL
 Group:		X11/Applications/Graphics
 Group(de):	X11/Applikationen/Grafik
 Group(pl):	X11/Aplikacje/Grafika
-Source0:	%{name}.tgz
+Source0:	http://sol.spaceports.com/~engels/programming/unix/gilt/file/Gilt.java.final.tgz
 Patch0:		%{name}-configure.in.patch
-#BuildRequires:	
+URL:		http://sol.spaceports.com/~engels/programming/unix/gilt/
+BuildRequires:	autoconf
+BuildRequires:	automake
 #Requires:	
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 
 %description
+Gilt is a text oriented picture editor.
 
 %description -l pl
+Gilt jest tekstowo zorientowanym edytorem obrazków.
 
 %prep
 %setup -q -n %{name}
