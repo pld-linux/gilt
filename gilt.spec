@@ -13,7 +13,6 @@ BuildRequires:	automake
 #Requires:
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
 
 %description
 Gilt is a text oriented picture editor.
