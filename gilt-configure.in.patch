@@ -1,0 +1,11 @@
+--- configure.in.org	Mon May 17 21:35:19 1999
++++ configure.in	Fri Dec 17 12:28:25 1999
+@@ -121,7 +121,7 @@
+ dnl LDFLAGS ="$LDFLAGS $LIBS"
+ 
+ dnl ---------- test for openGL ----------
+-AC_CHECK_HEADER(GL/gl.h,,
++AC_CHECK_HEADER(/usr/X11R6/include/GL/gl.h,,
+     AC_MSG_ERROR(Test for openGL include-file gl.h failed.))
+ 
+ AC_CHECK_LIB(MesaGL, glInitNames,,
