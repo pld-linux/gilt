@@ -3,11 +3,11 @@ Summary(pl):	gilt
 Name:		gilt
 Version:	0.0.2
 Release:	1
-Copyright:	GPL
-Group:		graphics
+License:	GPL
+Group:		X11/Applications/Graphics
 Group(pl):	grafika
-Source:		%{name}.tgz
-Patch:		gilt-configure.in.patch
+Source0:	%{name}.tgz
+Patch0:		gilt-configure.in.patch
 #BuildRequires:	
 #Requires:	
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -15,7 +15,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define	_prefix	/usr/X11R6
 
 %description
- 
+
 %description -l pl
 
 %prep
@@ -27,10 +27,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 rm -rf config.*
 aclocal
 autoconf
-#CPPFLAGS="$RPM_OPT_FLAGS -Wall  -Iusr/X11R6 -I/usr/X11R6/include"	\
-#CPP="gcc $RPM_OPT_FLAGS -Wall -Iusr/X11R6 -I/usr/X11R6/include"	\
-#INCLUDEDIR="-I/usr/X11R6/include" \
-CFLAGS="-I/usr/include "	\
+#CPPFLAGS="$RPM_OPT_FLAGS -Wall -Iusr/X11R6 -I%{_includedir}" \
+#CPP="gcc $RPM_OPT_FLAGS -Wall -Iusr/X11R6 -I%{_includedir}" \
+#INCLUDEDIR="-I%{_includedir}" \
+CFLAGS="-I%{_includedir} "	\
 ./configure --prefix=%{_prefix}
 make RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
 
