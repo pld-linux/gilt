@@ -27,7 +27,7 @@ Gilt jest tekstowo zorientowanym edytorem obrazków.
 
 %build
 rm -rf config.*
-aclocal
+%{__aclocal}
 %{__autoconf}
 #CPPFLAGS="%{rpmcflags} -Wall -Iusr/X11R6 -I%{_includedir}" \
 #CPP="%{__cc} %{rpmcflags} -Wall -Iusr/X11R6 -I%{_includedir}" \
