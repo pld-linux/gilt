@@ -23,7 +23,7 @@ Gilt jest tekstowo zorientowanym edytorem obrazków.
 
 %prep
 %setup -q -n %{name}
-%patch -p0
+%patch0 -p0
 
 %build
 rm -rf config.*
