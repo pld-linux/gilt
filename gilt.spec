@@ -1,5 +1,5 @@
 Summary:	gilt - text oriented pictures editor
-Summary(pl):	gilt - tekstowo zorientowany edytor obrazków
+Summary(pl.UTF-8):   gilt - tekstowo zorientowany edytor obrazkÃ³w
 Name:		gilt
 Version:	0.0.2
 Release:	1
@@ -18,8 +18,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Gilt is a text oriented picture editor.
 
-%description -l pl
-Gilt jest tekstowo zorientowanym edytorem obrazków.
+%description -l pl.UTF-8
+Gilt jest tekstowo zorientowanym edytorem obrazkÃ³w.
 
 %prep
 %setup -q -n %{name}
