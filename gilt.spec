@@ -1,5 +1,5 @@
 Summary:	gilt - text oriented pictures editor
-Summary(pl.UTF-8):   gilt - tekstowo zorientowany edytor obrazków
+Summary(pl.UTF-8):	gilt - tekstowo zorientowany edytor obrazków
 Name:		gilt
 Version:	0.0.2
 Release:	1
